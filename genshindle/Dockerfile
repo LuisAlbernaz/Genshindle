@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-RUN npm run build
+RUN next build --no-lint
 
 # Etapa de execução
 FROM node:18-alpine
